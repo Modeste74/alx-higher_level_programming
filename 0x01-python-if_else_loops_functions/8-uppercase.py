@@ -6,4 +6,5 @@ def uppercase(str):
             convert += chr(ord(lower) - 32)
         else:
             convert += lower
-    print(convert)
+    print(convert, end='')
+    print()
