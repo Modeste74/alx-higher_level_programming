@@ -1,4 +1,5 @@
 #!/bin/bash
 pyfile=${PYFILE}
-output_file="${pyfile}c"
-python3 -m py_compile $pyfile -o $output_file
+python3 -m py_compile $pyfile
+compiled_file = "${pyfile}c"
+mv "__pycache__/${pyfile%.*}.python-*.pyc" $compiled_file
