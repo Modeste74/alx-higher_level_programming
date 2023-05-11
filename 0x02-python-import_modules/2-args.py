@@ -8,5 +8,5 @@ elif num_arg == 1:
     print("1 argument:")
 else:
     print("{} argument:".format(num_arg))
-
-
+for i in range(num_arg):
+    print("{}: {}".format(i + 1, sys.argv[i + 1]))
