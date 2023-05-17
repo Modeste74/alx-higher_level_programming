@@ -7,4 +7,3 @@ def uniq_add(my_list=[]):
             uniq_num.add(n)
             sum_uniq += n
     return sum_uniq
-
