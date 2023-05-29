@@ -6,11 +6,10 @@ def list_division(my_list_1, my_list_2, list_length):
             try:
                 nume = my_list_1[i]
                 deno = my_list_2[i]
+                result = nume / deno
             except IndexError:
                 print("out of range")
-                break
-            try:
-                result = nume / deno
+                result = 0
             except TypeError:
                 print("wrong type")
                 result = 0
