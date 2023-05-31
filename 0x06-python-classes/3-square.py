@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """Define a class Sqaure"""
+
+
 class Square:
     """Represents a square with
     attribute size
     """
     def __init__(self, size=0):
-        """initializes the square with 
+        """initializes the square with
         args size of type int
         """
         if not isinstance(size, int):
@@ -16,6 +18,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+
     def area(self):
         """calculates area of square
          using the attribute size
