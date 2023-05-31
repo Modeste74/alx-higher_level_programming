@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" defines classes for a singly linked list"""
+
+
 class Node:
      """
      Node class represents a node of a singly linked list.
@@ -9,13 +12,9 @@ class Node:
     """
 
     def __init__(self, data, next_node=None):
-        """Initializes a new instance of the Node class.
-        Args:
-            data (int): The data to be stored in the node.
-            next_node (Node): The next node in the list. Default is None.
-        """
+        """Initializes the a new node"""
         self.data = data
-        self.next_node = next_node
+        self.next_node = node
 
     @property
     def data(self):
@@ -81,6 +80,7 @@ class SinglyLinkedList:
             result += str(node.data) + "\n"
             node = node.next_node
         return result
+
     def sorted_insert(self, value):
         """
         Inserts a new node
