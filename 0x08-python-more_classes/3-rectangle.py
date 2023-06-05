@@ -76,4 +76,5 @@ class Rectangle:
             return ""
         rectangle = "#" * self.__width + "\n"
         rectangle *= self.__height
+        rectangle = rectangle[:-1]
         return rectangle

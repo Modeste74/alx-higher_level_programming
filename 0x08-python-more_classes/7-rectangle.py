@@ -80,6 +80,7 @@ class Rectangle:
             return ""
         rectangle = str(self.print_symbol) * self.__width + "\n"
         rectangle *= self.__height
+        rectangle = rectangle[:-1]
         return rectangle
 
     def __repr__(self):
