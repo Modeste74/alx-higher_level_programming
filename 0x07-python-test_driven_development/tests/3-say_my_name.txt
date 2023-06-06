@@ -1,0 +1,40 @@
+The ``3-say_my_name`` module
+=====================
+
+Using ``say_my_name``
+-------------------
+``say_my_name`` from the ``3-say_my_name`` module:
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking it works with two names:
+	>>> say_my_name("Modeste", "Ciira")
+	My name is Modeste Ciira
+
+Checking if it works with one name:
+	>>> say_my_name("Portia")
+	My name is Portia
+
+Checking when its given an int:
+	>>> say_my_name(4, "Smith")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+Checking when a name is just passed along:
+	>>> say_my_name(Martin, Riggs)
+	Traceback (most recent call last):
+	...
+	NameError: name 'Martin' is not defined
+
+Checking when last_name is not a string:
+	>>> say_my_name("Cleo", [4])
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Checking when the function takes more than two names:
+	>>> say_my_name("Fernando", "Guerrerro", "Gibbler")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+

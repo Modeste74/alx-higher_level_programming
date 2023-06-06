@@ -1,0 +1,68 @@
+The ``0-add_integer`` module
+========================
+
+Using ``add_integer``
+---------------------
+
+This is how the function works.
+``add_integer from the ``0-add_integer`` module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Checking regular addition:
+	>>> add_integer(1, 2)
+	3
+
+Checking addition between positve and negative:
+	>>> add_integer(2, -1)
+	1
+
+Checking addition of valid floats:
+	>>> add_integer(2.5, 4.6)
+	6
+
+Checking addition between float and int:
+	>>> add_integer(4.5, 5)
+	9
+
+Checking addition over looping values:
+	>>> [add_integer(i, i ** 2) for i in range(3)]
+	[0, 2, 6]
+
+Checking addition between negative and positive:
+	>>> add_integer(-4, 5)
+	1
+
+Checking for addition in long ints:
+	>>> add_integer(999999999998888, 987)
+	999999999999875
+
+Checking for addition between non-int and int:
+	>>> add_integer([2], 5)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking for addition between number and string:
+	>>> add_integer(5, "number 5")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Checking for addition of nothing:
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Checking for addition of bool and int:
+	>>> add_integer(True, 4)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking for more than 2 args:
+	>>> add_integer(2, 5, 8)
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
