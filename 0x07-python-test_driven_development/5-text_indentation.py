@@ -9,7 +9,7 @@ def text_indentation(text):
     it prints separated text
     """
     if not isinstance(text, str):
-        raise TypeError("text mmust be a string")
+        raise TypeError("text must be a string")
     no_space = 0
     for i in text:
         if no_space == 0:
