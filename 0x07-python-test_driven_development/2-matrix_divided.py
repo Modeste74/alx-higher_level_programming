@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""Defines a function
+matrix_divided
+"""
+
 
 def matrix_divided(matrix, div):
+    """divides a matrix"""
     for row in matrix:
         for num in row:
             if not isinstance(num, (int, float)):
@@ -11,7 +16,7 @@ def matrix_divided(matrix, div):
                     "matrix must be a matrix (list of lists) of integers/floats")
     row_size = set(len(row) for row in matrix)
     if len(row_size) > 1:
-        raise TypeError("Each row of matrix must have the same length")
+        raise TypeError("Each row of the matrix must have the same size")
     if not isinstance(div, (float, int)):
         raise TypeError("div must be a number")
     if div == 0:

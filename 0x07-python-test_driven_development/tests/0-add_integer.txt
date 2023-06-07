@@ -66,3 +66,19 @@ Checking for more than 2 args:
 	...
 	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
+Checking for passed float Nan:
+	>>> add_integer(5, float('nan'))
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
+
+Checking for to infinity floats:
+	>>> add_integer(5.78, float('inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+Checking for missing one args:
+	>>> add_integer(4.5)
+	102
+

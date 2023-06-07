@@ -12,7 +12,7 @@ Checking it works with two names:
 
 Checking if it works with one name:
 	>>> say_my_name("Portia")
-	My name is Portia
+	My name is Portia 
 
 Checking when its given an int:
 	>>> say_my_name(4, "Smith")
