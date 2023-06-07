@@ -21,6 +21,13 @@ class TestMaxInteger(unittest.TestCase):
         no_order = [1, 4, 3, 2]
         self.assertEqual(max_integer(no_order), 4)
 
+    def test_in_the_beggining(self):
+        """Testing when max
+        int is in the beggining
+        """
+        max_in_start = [5, 4, 3, 2]
+        self.assertEqual(max_integer(max_in_start), 5)
+
     def test_one_int(self):
         """Testing one number list"""
         one_no = [9]
