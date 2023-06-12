@@ -1,0 +1,72 @@
+The ``1-my_list`` module
+====================
+
+Using ``MyList``
+---------------
+
+``MyList`` from the ``1-my_list`` module:
+	>>> MyList = __import__("1-my_list").MyList
+
+Checking for appending function:
+	>>> lst = MyList()
+	>>> lst.append(5)
+	>>> lst.append(9)
+	>>> lst.append(3)
+	>>> lst.append(2)
+	>>> lst.append(7)
+	>>> lst.append(6)
+	>>> lst.append(4)
+	>>> print(lst)
+	[5, 9, 3, 2, 7, 6, 4]
+
+Checking for sorting functionality:
+	>>> lst.print_sorted()
+	[2, 3, 4, 5, 6, 7, 9]
+
+Checking for sorting with negative:
+	>>> new = MyList()
+	>>> new.append(5)
+	>>> new.append(-9)
+	>>> new.append(3)
+	>>> new.append(2)
+	>>> new.append(-7)
+	>>> new.append(6)
+	>>> new.append(4)
+	>>> new.print_sorted()
+	[-9, -7, 2, 3, 4, 5, 6]
+
+Checking for sorting with floats:
+	>>> flt = MyList()
+	>>> flt.append(5.6)
+	>>> flt.append(9.5)
+	>>> flt.append(3.8)
+	>>> flt.append(2.4)
+	>>> flt.append(-7.3)
+	>>> flt.append(6.9)
+	>>> flt.append(4.2)
+	>>> flt.print_sorted()
+	[-7.3, 2.4, 3.8, 4.2, 5.6, 6.9, 9.5]
+
+Checking with all negative values:
+	>>> ng = MyList()
+	>>> ng.append(-1)
+	>>> ng.append(-9)
+	>>> ng.append(-6)
+	>>> ng.append(-3)
+	>>> ng.append(-4)
+	>>> ng.append(-8)
+	>>> ng.append(-7)
+	>>> ng.print_sorted()
+	[-9, -8, -7, -6, -4, -3, -1]
+
+Checking when too many args is passed:
+	>>> ng.print_sorted(2)
+	Traceback (most recent call last):
+	...
+	TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
+
+Testing for empty list:
+	>>> empt = MyList()
+	>>> print(empt)
+	[]
+
