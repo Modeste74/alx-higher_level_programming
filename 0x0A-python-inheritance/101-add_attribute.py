@@ -2,6 +2,8 @@
 """define a function
 add_attribute
 """
+
+
 def add_attribute(obj, attr, value):
     """adds a new attribute"""
     if not hasattr(obj, '__dict__'):
