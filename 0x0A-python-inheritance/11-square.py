@@ -35,10 +35,12 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """reps a square"""
     def __init__(self, size):
-        super().__init__(size, size)
-        self.__size = size
+        """intializes the square"""
         self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
 
     def area(self):
         """returns area of square"""
