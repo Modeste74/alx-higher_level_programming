@@ -40,9 +40,9 @@ class Square(Rectangle):
     """represents a square"""
     def __init__(self, size):
         """uses the attributes in Rectangle"""
-        super().__init__(size, size)
         self.__size = size
         self.integer_validator("size", size)
+        super().__init__(size, size)
 
     def area(self):
         """returns area of square"""
