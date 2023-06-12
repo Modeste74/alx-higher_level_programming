@@ -17,7 +17,9 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """reps a rectangle"""
     def __init__(self, width, height):
+        """initialzes the rectangle"""
         self.__width = width
         self.__height = height
         self.integer_validator("width", width)
@@ -35,7 +37,9 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """represents a square"""
     def __init__(self, size):
+        """uses the attributes in Rectangle"""
         super().__init__(size, size)
         self.__size = size
         self.integer_validator("size", size)
