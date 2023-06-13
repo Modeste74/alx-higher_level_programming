@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """importing of json and makes use of it"""
 
 import json
