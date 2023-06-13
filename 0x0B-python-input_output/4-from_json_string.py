@@ -1,5 +1,6 @@
 #!/usr/python3
 """importing of json and makes use of it"""
+
 import json
 
 
