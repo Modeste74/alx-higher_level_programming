@@ -13,7 +13,7 @@ def class_to_json(obj):
     json_dict = {}
     for attr in dir(obj):
         if attr.startswith("__"):
-            continue:
+            continue
         value = getattr(obj, attr)
         if isinstance(value, (list, dict, str, int, bool)):
             json_dict[attr] = value

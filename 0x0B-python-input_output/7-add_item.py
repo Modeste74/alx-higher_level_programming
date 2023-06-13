@@ -19,10 +19,10 @@ def add_item_to(args, filename):
         existing_data = lj(filename)
     except FileNotFoundError:
         existing_data = []
-    
     existing_data.extend(args)
     sj(existing_data, filename)
     with open(filename, "a") as f:
         f.write("\n")
+
 
 add_item_to(sys.argv[1:], "add_item.json")
