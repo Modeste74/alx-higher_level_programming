@@ -63,3 +63,32 @@ Checking for too many args in integer_validator:
 	...
 	TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+Checking when integer validator is given a tuple:
+	>>> bg.integer_validator("num", (4,))
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+Checking when a boolean is passed in the integer validator:
+	>>> bg.integer_validator("num", True)
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+Checking when a list is passed in the integer validator:
+	>>> bg.integer_validator("num", [4])
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+Checking when a dict is passed in the integer validator:
+	>>> bg.integer_validator("num", {2, 4})
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+Checking when None is passed:
+	>>> bg.integer_validator("num", None)
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
