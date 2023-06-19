@@ -2,6 +2,7 @@
 """Defines a class Base"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -103,3 +104,39 @@ class Base:
                 instance = cls.create(**row)
                 instances.append(instance)
         return instances
+
+    @staticmethod
+    def draw(list_rectangle, list_square):
+        """opens window and draws all
+        rectangle and squares
+        """
+        window = turtle.Screen()
+        window.setup(width=800, height=600)
+        window.title("Rectangles and Squares")
+        rectangle_turtle = turtle.Turtle()
+        rectangle_turtle.shape("turtle")
+        rectangle_turtle.pensize(3)
+        rectangle_turtle.color("#ffffff")
+        rectangle_turtle.screen.bgcolor("#b7312c")
+        square_turtle = turtle.Turtle()
+        square_turtle.shape("turtle")
+        square_turtle.color("#ffffff")
+        square_turtle.pensize(3)
+        square_turtle.screen.bgcolor("#b7312c")
+        for rect in list_rectangle:
+            rectangle_turtle.penup()
+            rectangle_turtle.goto(rectangle.x, rectangle.y)
+            rectangle_turtle.pendown()
+            for i in range(2):
+                rectangle_turtle.forward(rectangle.width)
+                rectangle_turtle.left(90)
+                rectangle_turtle.forward(rectangle.height)
+                rectangle_turtle.left(90)
+        for sqr in list_rectangle:
+            square_turtle.penup()
+            square_turtle.goto(square.x, square.y)
+            square_turtle.pendown()
+            for i in range(4):
+                square_turtle.forward(square.size)
+                square_turtle.left(90)
+        window.exitonclick()
