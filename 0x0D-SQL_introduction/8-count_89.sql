@@ -3,5 +3,5 @@
 -- database hbtn_0c_0 in your MySQL server
 
 SELECT COUNT(*)
-FROM hbtn_0c_0.first_table
+FROM first_table
 WHERE id = 89;
