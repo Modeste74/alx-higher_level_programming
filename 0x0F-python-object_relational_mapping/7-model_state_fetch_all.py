@@ -9,12 +9,9 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    db_username = sys.argv[1]
-    db_password = sys.argv[2]
-    db_database = sys.argv[3]
     engine = create_engine(
-            f"mysql+mysqldb://{db_username}:{db_password}"
-            "@localhost/{db_database}", pool_pre_ping=True)
+            f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}"
+            "@localhost/{sys.argv[3]}", pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
