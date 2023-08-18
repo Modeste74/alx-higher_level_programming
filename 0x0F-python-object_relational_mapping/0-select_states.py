@@ -1,9 +1,12 @@
 #!/usr/bin/python3
+"""list all states from a database"""
+
 import MySQLdb
 import sys
 
 
 def list_states(username, password, database):
+    """function that list all states"""
     try:
         db = MySQLdb.connect(
                 host="localhost",

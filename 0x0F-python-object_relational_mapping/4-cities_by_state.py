@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+"""defines a function cities_by_state"""
+
 import MySQLdb
 import sys
 
 
 def cities_by_state(username, password, database):
+    """lists all cities from the database
+    hbtn_0e_4_usa"""
     try:
         db = MySQLdb.connect(
                 host="localhost",

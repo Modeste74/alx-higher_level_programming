@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+"""list all state starting with
+the letter 'N'"""
+
 import MySQLdb
 import sys
 
 
 def list_by_name(username, password, database):
+    """defines a function to list states
+    starting with 'N'"""
     try:
         db = MySQLdb.connect(
                 host="localhost",
