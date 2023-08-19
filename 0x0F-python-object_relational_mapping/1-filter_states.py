@@ -22,7 +22,8 @@ def list_by_name(username, password, database):
         cursor.execute(query)
         states = cursor.fetchall()
         for state in states:
-            print(state)
+            if state[1][0] == 'N':
+                print(state)
         db.close()
     except MySQLdb.Error as e:
         print(f"Error: {e}")
