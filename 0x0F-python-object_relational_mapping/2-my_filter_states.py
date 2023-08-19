@@ -27,6 +27,7 @@ def list_state(username, password, database, state_name):
             print("State not found")
         db.close()
     except MySQLdb.Error as e:
+        print(f"Error: {e}")
         sys.exit(1)
 
 
