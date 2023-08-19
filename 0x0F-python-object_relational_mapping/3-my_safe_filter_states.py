@@ -21,13 +21,11 @@ def list_state(username, password, database, state_name):
         query = "SELECT * FROM states WHERE name LIKE %s ORDER BY id"
         cursor.execute(query, (state_name,))
         states = cursor.fetchall()
-        if states:
-            for state in states:
-                print(state)
-        else:
-            print("State not found")
+        for state in states:
+            print(state)
         db.close()
     except MySQLdb.Error as e:
+        print(f"Error: {e}")
         sys.exit(1)
 
 
