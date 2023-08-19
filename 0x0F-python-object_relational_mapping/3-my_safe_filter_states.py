@@ -18,7 +18,7 @@ def list_state(username, password, database, state_name):
                 db=database
                 )
         cursor = db.cursor()
-        query = "SELECT * FROM states WHERE name = %s"
+        query = "SELECT * FROM states WHERE name = %s ORDER BY id"
         cursor.execute(query, (state_name,))
         states = cursor.fetchall()
         if states:
