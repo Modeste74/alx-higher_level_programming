@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 """defines a function list_state"""
 
-import MySQLdb
-import sys
-
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        sys.exit(1)
+    import MySQLdb
+    import sys
 
     username = sys.argv[1]
     password = sys.argv[2]
@@ -26,4 +23,5 @@ if __name__ == "__main__":
     states = cursor.fetchall()
     for state in states:
         print(state)
+    cursor.close()
     db.close()
