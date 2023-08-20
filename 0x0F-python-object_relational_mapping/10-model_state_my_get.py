@@ -23,7 +23,8 @@ if __name__ == "__main__":
     for state in states:
         if state_name == state.name:
             print(f"{state.id}")
-            sys.exit(1)
-        else:
-            print("Not found")
+            found = True
+            break
+    if not found:
+        print("Not found")
     session.close()
