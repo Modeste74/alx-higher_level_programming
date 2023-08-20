@@ -3,7 +3,7 @@
 an argument from the table given"""
 
 import sys
-from sqlalchemy import create_table
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
