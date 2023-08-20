@@ -18,7 +18,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state_to_update = session.query(State).filter(State.id == 4)
+    state_to_update = session.query(State).filter_by(id=2).first()
     if state_to_update is None:
         print("Not found")
     else:
