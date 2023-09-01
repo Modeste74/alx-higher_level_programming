@@ -11,7 +11,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         header_name = "X-Request-Id"
         header_content = response.headers.get(header_name)
-        if header_content is None:
-            print("Nothing present")
-        else:
-            print(header_content)
+        print(header_content)
