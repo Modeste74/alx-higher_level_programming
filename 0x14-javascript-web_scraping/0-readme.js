@@ -5,7 +5,7 @@ if (!filePath) {
   console.error('Please provide a file path');
   process.exit(1);
 }
-fs.readFile(filePath, 'utf8', function(err, data) {
+fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;
